@@ -2,9 +2,9 @@
 
 ## IDENTIFICAÇÃO
 
-**Nome completo:** Felipe Mendes Almeida e 
-**Matrícula:** ____________________ 
-**Email:** felix.felipe@gmail.com |     
+**Nome completo:** Felipe Mendes Almeida e Karliane Lopes Evangelista
+**Matrícula:** 2528652 | 2527024
+**Email:** felix.felipe@gmail.com | karliane.lopes.kl.kl@gmail.com 
 **Data:** 05/06/2026
 
 ---

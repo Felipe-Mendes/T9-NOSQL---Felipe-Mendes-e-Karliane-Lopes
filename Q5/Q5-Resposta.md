@@ -2,9 +2,9 @@
 
 ## IDENTIFICAÇÃO
 
-**Nome completo:** Felipe Mendes Almeida e 
-**Matrícula:** ____________________ 
-**Email:** felix.felipe@gmail.com |     
+**Nome completo:** Felipe Mendes Almeida e Karliane Lopes Evangelista
+**Matrícula:** 2528652 | 2527024
+**Email:** felix.felipe@gmail.com | karliane.lopes.kl.kl@gmail.com 
 **Data:** 05/06/2026
 
 ---
@@ -48,15 +48,15 @@ db.movies.aggregate([
 
 ### Explicação
 **Por que esses gêneros são considerados subestimados?**
-O gênero **News** é considerado subestimado neste contexto pelos seguintes motivos:
+O gênero é considerado subestimado neste contexto pelos seguintes motivos:
 
 1. **Pouca representatividade:** com apenas 44 filmes na base, é um gênero com baixíssimo volume de produção em comparação com Drama (~14.000), Comedy (~8.000) ou Action (~5.000).
 
-2. **Alta qualidade média:** apesar do pequeno volume, os filmes classificados como "News" possuem média de **7.25 no IMDB** — acima da maioria dos gêneros populares, cujas médias geralmente ficam entre 6.0 e 6.8.
+2. **Baixa visibilidade:** por ser um nicho pequeno, esses filmes raramente aparecem nos rankings de popularidade ou bilheteria.
 
-3. **Baixa visibilidade:** por ser um nicho pequeno, esses filmes (geralmente documentários jornalísticos ou dramas baseados em fatos reais de mídia) raramente aparecem nos rankings de popularidade ou bilheteria.
-
-4. **Resultado restrito dos critérios:** a combinação dos filtros (10–50 filmes + média > 7.0) é bastante seletiva. Gêneros populares como Drama, Comedy e Documentary têm centenas ou milhares de filmes, ultrapassando o limite máximo de 50. Gêneros muito raros têm menos de 10 filmes e são excluídos. Apenas "News" sobreviveu a todos os filtros com alta qualidade.
+3. **Resultado restrito dos critérios:** a combinação dos filtros (10–50 filmes + média > 7.0) é bastante seletiva. Gêneros populares como Drama, Comedy e Documentary têm centenas ou milhares de filmes, ultrapassando o limite máximo de 50. Gêneros muito raros têm menos de 10 filmes e são excluídos. Apenas "News" sobreviveu a todos os filtros com alta qualidade.
 
 
 ### Screenshot
+- Questao 05 - Resposta 02.png
+- Questao 05 - Resposta.png

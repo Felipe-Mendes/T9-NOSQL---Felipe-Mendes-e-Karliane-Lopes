@@ -2,59 +2,40 @@
 
 ## IDENTIFICAÇÃO
 
-**Nome completo:** Felipe Mendes Almeida e 
-**Matrícula:** ____________________ 
-**Email:** felix.felipe@gmail.com |     
+**Nome completo:** Felipe Mendes Almeida e Karliane Lopes Evangelista
+**Matrícula:** 2528652 | 2527024
+**Email:** felix.felipe@gmail.com | karliane.lopes.kl.kl@gmail.com 
 **Data:** 05/06/2026
 
 ---
 
-# QUESTÃO 3 - Pipeline com $unwind e $group
+## QUESTÃO 4 - Agregação com $lookup
 
-### Pipeline Utilizada
+## Pipeline Utilizada
+
 ```javascript
-db.movies.aggregate([
-  { $match: { "imdb.rating": { $exists: true, $type: "double" } } },
-  { $unwind: "$cast" },
+db.comments.aggregate([
   { $group: {
-      _id: "$cast",
-      quantidade_filmes: { $sum: 1 },
-      media_rating: { $avg: "$imdb.rating" }
+      _id: "$movie_id",
+      quantidade_comentarios: { $sum: 1 },
+      comentaristas: { $push: { nome: "$name", email: "$email" } }
   }},
-  { $sort: { quantidade_filmes: -1 } },
+  { $sort: { quantidade_comentarios: -1 } },
   { $limit: 5 },
+  { $lookup: {
+      from: "movies",
+      localField: "_id",
+      foreignField: "_id",
+      as: "filme"
+  }},
+  { $unwind: "$filme" },
   { $project: {
       _id: 0,
-      ator: "$_id",
-      quantidade_filmes: 1,
-      media_rating: { $round: ["$media_rating", 2] }
+      titulo: "$filme.title",
+      ano: "$filme.year",
+      quantidade_comentarios: 1,
+      primeiros_comentaristas: { $slice: ["$comentaristas", 3] }
   }}
 ])
 ```
 
-### Resultado Obtido
-
-
-| # | Ator                 | Qtd. de Filmes | Média IMDB |
-|---|----------------------|----------------|------------|
-| 1 | Gérard Depardieu     | 67             |   6.69     |
-| 2 | Robert De Niro       | 58             |    6.96    |
-| 3 | Michael Caine        | 51             |    6.71    |
-| 4 | Bruce Willis         | 49             |   6.41     |
-| 5 | Samuel L. Jackson    | 48             |   6.40     |
-
-### Screenshot
-- Questao 03.png
-- Questao 03 - resposta 02.png
-- Questao 03 - resposta.png
-- Questao 03 - stage01.png
-- Questao 03 - stage02.png
-- Questao 03 - stage03.png
-- Questao 03 - stage04.png
-- Questao 03 - stage05.png
-- Questao 03 - stage06.png
-
-### Observações (opcional)
-
-
----
